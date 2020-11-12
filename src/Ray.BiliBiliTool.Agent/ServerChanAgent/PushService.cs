@@ -31,7 +31,7 @@ namespace Ray.BiliBiliTool.Agent.ServerChanAgent
         {
             if (string.IsNullOrWhiteSpace(_pushOptions.PushScKey)) return new PushResponse { Errno = int.MinValue, Errmsg = "未配置SCKEY" };
 
-            var title = $"Ray.BiliBiliTool任务日报";
+            var title = $"B站签到日报";
             var content = $"#### 日期：{DateTime.Now:yyyy-MM-dd} \r\n{PushStringWriter.GetStringBuilder()}";
 
             return DoSend(title, content);
